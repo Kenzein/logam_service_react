@@ -39,17 +39,20 @@ export const features: Feature[] = [
 export const stats: Stat[] = [
   {
     id: 1,
-    value: "500+",
+    value: 500,
     label: "Motor Ditangani",
+    suffix: "+",
   },
   {
     id: 2,
-    value: "5+",
+    value: 5,
+    suffix: "+",
     label: "Tahun Pengalaman",
   },
   {
-    id: 1,
-    value: "100%",
+    id: 3,
+    value: 100,
+    suffix: "%",
     label: "Kepuasan Pelanggan",
   },
 ];

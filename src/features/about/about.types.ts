@@ -8,6 +8,7 @@ export interface Feature {
 
 export interface Stat {
   id: number;
-  value: string;
+  value: number;
   label: string;
+  suffix?: string;
 }

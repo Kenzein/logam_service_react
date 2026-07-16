@@ -21,7 +21,7 @@ export default function Navbar() {
               <li key={item.href}>
                 <a
                   href={item.href}
-                  className="text-white transition hover:text-blue-500"
+                  className="relative text-white transition-colors duration-300 hover:text-blue-500 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-blue-500 after:transition-all after:duration-300 hover:after:w-full"
                 >
                   {item.label}
                 </a>
@@ -30,14 +30,22 @@ export default function Navbar() {
           </ul>
           {/* Button Mobile */}
           <button
-            className="text-3xl text-white md:hidden"
+            className="text-3xl text-white transition-transform duration-300 hover:scale-110 md:hidden"
             onClick={toggleMenu}
           >
-            {isOpen ? <HiOutlineX /> : <HiOutlineMenu />}
+            {isOpen ? (
+              <HiOutlineX className="transition-all duration-300" />
+            ) : (
+              <HiOutlineMenu className="transition-all duration-300" />
+            )}
           </button>
         </div>
       </nav>
-      <MobileMenu isOpen={isOpen} menus={navItems} />
+      <MobileMenu
+        isOpen={isOpen}
+        menus={navItems}
+        onClose={() => setIsOpen(false)}
+      />
     </>
   );
 }

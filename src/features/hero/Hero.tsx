@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex min-h-screen items-center bg-black"
+      className="relative flex min-h-screen items-center bg-linear-to-r from-slate-950 via-slate-900 to-blue-950"
     >
       <div className="mx-auto max-w-7xl px-6 py-32">
         <span className="rounded-full bg-blue-600 px-4 py-2 text-sm text-white">
